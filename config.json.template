@@ -1,0 +1,6 @@
+{
+  "trilium": {
+    "base_url": "http://localhost:8080",
+    "api_token": "your-trilium-api-token-here"
+  }
+}
