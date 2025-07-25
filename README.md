@@ -403,11 +403,15 @@ Help others by:
 
 ## About the Author
 
-This project is developed by **Paul Welty** at [Synaxis, LLC](https://www.synaxis.ai) - specializing in AI integration and automation solutions for modern businesses.
+This project is developed by **Dr. Paul Welty**, Vice Provost for Academic Innovation at Emory University and founder of [Synaxis, LLC](https://www.synaxis.ai). With a Ph.D. in Philosophy and 25+ years of technology solution experience, Paul specializes in strategic AI implementation and team capability transformation.
+
+At Emory, Paul's major achievements include launching three transformative initiatives: the Center for AI Learning (CAIL), The Hatchery (Emory's Center for Student Innovation and Entrepreneurship), and Facet (Emory's Faculty Information and Action System). Through Synaxis, he helps teams dramatically increase their capacity through practical AI integration - from customer support to market research.
+
+This MCP server reflects Paul's commitment to making AI tools accessible and practical for real-world workflows, bridging the gap between cutting-edge technology and everyday productivity.
 
 🌐 **Learn more:** [paulwelty.com](https://www.paulwelty.com) | [synaxis.ai](https://www.synaxis.ai)
 
-*Interested in custom MCP server development or AI integration consulting? Get in touch!*
+*Interested in team AI implementation or custom MCP server development? Let's talk about transforming your workflow.*
 
 ## API Reference
 
