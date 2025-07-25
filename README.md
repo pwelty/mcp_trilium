@@ -10,6 +10,27 @@ Connect your personal knowledge management system to AI conversations with full-
 
 *This is a Python implementation. If you prefer JavaScript/TypeScript, check out [triliumnext-mcp](https://github.com/tan-yong-sheng/triliumnext-mcp).*
 
+## ⚠️ Important: Claude Desktop vs Claude Web
+
+**This MCP server ONLY works with Claude Desktop, NOT claude.ai (Claude Web).**
+
+| Claude Desktop | Claude Web (claude.ai) |
+|----------------|-------------------------|
+| ✅ Desktop app you download | ❌ Web browser version |
+| ✅ Supports MCP servers | ❌ No MCP support |
+| ✅ Runs tools locally | ❌ Cloud-only |
+| ✅ Can access your Trilium | ❌ Cannot access local services |
+
+**Why this matters:**
+- MCP servers run **locally on your machine**
+- Claude Desktop connects to them via **local processes**
+- Claude Web runs in **Anthropic's cloud** and cannot access your local Trilium instance
+- You **must** download and use [Claude Desktop](https://claude.ai/download) for this to work
+
+**Network Requirements:**
+- Claude Desktop and your Trilium instance must be on the **same network** or **mutually accessible**
+- If Trilium is behind Docker/VPN/Tailscale, ensure Claude Desktop can reach it
+
 ## Project Goals
 
 This project aims to:
@@ -314,6 +335,9 @@ python main.py
 ## FAQ
 
 ### General Questions
+
+**Q: Can I use this with Claude Web (claude.ai in my browser)?**  
+A: **No.** This only works with Claude Desktop (the downloadable app). Claude Web cannot connect to local MCP servers or access your Trilium instance. You must download and use [Claude Desktop](https://claude.ai/download).
 
 **Q: What is MCP and why should I use this?**  
 A: Model Context Protocol (MCP) allows Claude Desktop to directly interact with external tools and data sources. This server lets you search, read, and manage your Trilium notes directly from Claude conversations, making your knowledge base an active part of your AI workflows.
