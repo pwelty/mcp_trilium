@@ -401,6 +401,14 @@ Help others by:
 - Help answer questions from other users
 - Suggest improvements based on your experience
 
+## About the Author
+
+This project is developed by **Paul Welty** at [Synaxis, LLC](https://www.synaxis.ai) - specializing in AI integration and automation solutions for modern businesses.
+
+🌐 **Learn more:** [paulwelty.com](https://www.paulwelty.com) | [synaxis.ai](https://www.synaxis.ai)
+
+*Interested in custom MCP server development or AI integration consulting? Get in touch!*
+
 ## API Reference
 
 This server uses the TriliumNext ETAPI. For more information about the underlying API, see the [TriliumNext documentation](https://github.com/TriliumNext/Notes/wiki/ETAPI).

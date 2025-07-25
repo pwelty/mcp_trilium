@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "mcp-trilium"
 version = "0.1.0"
 description = "A Model Context Protocol (MCP) server for interacting with TriliumNext/Trilium Notes via the ETAPI"
-authors = [{name = "Paul Welty"}]
+authors = [{name = "Paul Welty", email = "paul@synaxis.ai"}]
 license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.8"
@@ -36,6 +36,8 @@ dependencies = [
 Homepage = "https://github.com/pwelty/mcp-trilium"
 Repository = "https://github.com/pwelty/mcp-trilium"
 Issues = "https://github.com/pwelty/mcp-trilium/issues"
+Author = "https://www.paulwelty.com"
+Company = "https://www.synaxis.ai"
 
 [project.scripts]
 mcp-trilium = "main:main"

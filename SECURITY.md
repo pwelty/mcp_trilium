@@ -13,7 +13,7 @@ If you discover a security vulnerability in MCP Trilium, please report it respon
 ### How to Report
 
 1. **DO NOT** create a public GitHub issue for security vulnerabilities
-2. Send an email to: [paul.welty@example.com] (replace with your actual email)
+2. Send an email to: paul@synaxis.ai
 3. Include detailed information about the vulnerability
 4. Provide steps to reproduce if possible
 
