@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-trilium"
+version = "0.1.0"
+description = "A Model Context Protocol (MCP) server for interacting with TriliumNext/Trilium Notes via the ETAPI"
+authors = [{name = "Paul Welty"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["mcp", "trilium", "notes", "knowledge-management"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",  
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: General",
+]
+dependencies = [
+    "mcp",
+    "httpx",
+    "aiohttp", 
+    "python-dotenv",
+]
+
+[project.urls]
+Homepage = "https://github.com/pwelty/mcp-trilium"
+Repository = "https://github.com/pwelty/mcp-trilium"
+Issues = "https://github.com/pwelty/mcp-trilium/issues"
+
+[project.scripts]
+mcp-trilium = "main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["services*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json", "*.md"]
