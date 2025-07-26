@@ -12,24 +12,26 @@ Connect your personal knowledge management system to AI conversations with full-
 
 ## ⚠️ Important: Claude Desktop vs Claude Web
 
-**This MCP server ONLY works with Claude Desktop, NOT claude.ai (Claude Web).**
+**This MCP server is designed for Claude Desktop and runs locally on your machine.**
 
 | Claude Desktop | Claude Web (claude.ai) |
 |----------------|-------------------------|
-| ✅ Desktop app you download | ❌ Web browser version |
-| ✅ Supports MCP servers | ❌ No MCP support |
-| ✅ Runs tools locally | ❌ Cloud-only |
-| ✅ Can access your Trilium | ❌ Cannot access local services |
+| ✅ Desktop app you download | ✅ Web browser version |
+| ✅ Supports local MCP servers | ✅ Supports remote MCP servers (BETA) |
+| ✅ Runs tools locally | ✅ Connects to hosted MCP servers |
+| ✅ Can access your local Trilium | ⚠️ Requires publicly accessible Trilium |
 
-**Why this matters:**
-- MCP servers run **locally on your machine**
-- Claude Desktop connects to them via **local processes**
-- Claude Web runs in **Anthropic's cloud** and cannot access your local Trilium instance
-- You **must** download and use [Claude Desktop](https://claude.ai/download) for this to work
+**Current Project Scope:**
+- This MCP server runs **locally on your machine** via stdio
+- Designed for **Claude Desktop** with local Trilium instances
+- You **must** download and use [Claude Desktop](https://claude.ai/download) for this implementation
 
 **Network Requirements:**
 - Claude Desktop and your Trilium instance must be on the **same network** or **mutually accessible**
 - If Trilium is behind Docker/VPN/Tailscale, ensure Claude Desktop can reach it
+
+**🚀 Future Possibilities:**
+Both Claude Web and ChatGPT now offer "Custom Connectors" (BETA) that can connect to remote MCP servers via HTTPS. We're exploring creating a hosted version of this MCP server for web-based AI assistants. [Follow development updates →](https://github.com/pwelty/mcp-trilium/discussions)
 
 ## Project Goals
 
@@ -337,7 +339,7 @@ python main.py
 ### General Questions
 
 **Q: Can I use this with Claude Web (claude.ai in my browser)?**  
-A: **No.** This only works with Claude Desktop (the downloadable app). Claude Web cannot connect to local MCP servers or access your Trilium instance. You must download and use [Claude Desktop](https://claude.ai/download).
+A: **Currently, this version only works with Claude Desktop.** However, both Claude Web and ChatGPT now support "Custom Connectors" (BETA) that can connect to remote MCP servers. This would require hosting the MCP server publicly and ensuring your Trilium instance is accessible via HTTPS. We're exploring this possibility for future versions.
 
 **Q: What is MCP and why should I use this?**  
 A: Model Context Protocol (MCP) allows Claude Desktop to directly interact with external tools and data sources. This server lets you search, read, and manage your Trilium notes directly from Claude conversations, making your knowledge base an active part of your AI workflows.
