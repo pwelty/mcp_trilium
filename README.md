@@ -10,6 +10,17 @@ Connect your personal knowledge management system to AI conversations with full-
 
 *This is a Python implementation. If you prefer JavaScript/TypeScript, check out [triliumnext-mcp](https://github.com/tan-yong-sheng/triliumnext-mcp).*
 
+## ✨ Recent updates (January 2026)
+
+**Fresh updates to keep pace with the rapidly evolving MCP ecosystem:**
+
+- 🚀 **MCP SDK 1.26.0** - Upgraded to the latest stable MCP SDK with improved performance and compatibility
+- 🐍 **Python 3.13 support** - Now tested and compatible with Python 3.10 through 3.13
+- 📦 **Modern dependencies** - All packages updated to latest stable versions (httpx 0.28.1, aiohttp 3.13.3)
+- ✅ **Enhanced CI/CD** - Automated testing across all supported Python versions
+
+This project is actively maintained and updated as the MCP specification evolves. Watching the repository growth from recent forks - thank you for the support! 🙏
+
 ## ⚠️ Important: Claude Desktop vs Claude Web
 
 **This MCP server is designed for Claude Desktop and runs locally on your machine.**
