@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Updated MCP SDK from 0.1.0 to 1.26.0 (pinned to v1.x)
+- Updated all dependencies to latest versions
+- Added Python 3.13 support and CI testing
+- Updated Python version badge to reflect 3.10-3.13 support
+
+## [0.1.0] - 2025-07-25
+
 ### Added
 - Initial release of MCP Trilium server
 - Full-text search across Trilium notes
@@ -38,10 +46,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - API tokens properly secured and not logged
 - Configuration files with sensitive data excluded from git
 
-## [0.1.0] - TBD
-
-### Added
-- Initial public release
 
 ---
 

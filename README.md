@@ -1,7 +1,7 @@
 # Trilium MCP Server
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10--3.13-blue.svg)](https://www.python.org/downloads/)
 [![CI](https://github.com/pwelty/mcp-trilium/workflows/CI/badge.svg)](https://github.com/pwelty/mcp-trilium/actions)
 
 🌳 **A powerful Model Context Protocol (MCP) server that brings your Trilium Notes knowledge base directly into Claude Desktop.**
