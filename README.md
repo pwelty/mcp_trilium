@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10--3.13-blue.svg)](https://www.python.org/downloads/)
-[![CI](https://github.com/pwelty/mcp-trilium/workflows/CI/badge.svg)](https://github.com/pwelty/mcp-trilium/actions)
+[![CI](https://github.com/pwelty/mcp_trilium/workflows/CI/badge.svg)](https://github.com/pwelty/mcp_trilium/actions)
 
 🌳 **A powerful Model Context Protocol (MCP) server that brings your Trilium Notes knowledge base directly into Claude Desktop.**
 
@@ -10,16 +10,14 @@ Connect your personal knowledge management system to AI conversations with full-
 
 *This is a Python implementation. If you prefer JavaScript/TypeScript, check out [triliumnext-mcp](https://github.com/tan-yong-sheng/triliumnext-mcp).*
 
-## ✨ Recent updates (January 2026)
-
-**Fresh updates to keep pace with the rapidly evolving MCP ecosystem:**
+## ✨ What's new in v0.2.0
 
 - 🚀 **MCP SDK 1.26.0** - Upgraded to the latest stable MCP SDK with improved performance and compatibility
 - 🐍 **Python 3.13 support** - Now tested and compatible with Python 3.10 through 3.13
 - 📦 **Modern dependencies** - All packages updated to latest stable versions (httpx 0.28.1, aiohttp 3.13.3)
-- ✅ **Enhanced CI/CD** - Automated testing across all supported Python versions
+- ✅ **Enhanced CI/CD** - Automated testing across all supported Python versions, automated releases
 
-This project is actively maintained and updated as the MCP specification evolves. Watching the repository growth from recent forks - thank you for the support! 🙏
+See the full [changelog](CHANGELOG.md) for details.
 
 ## ⚠️ Important: Claude Desktop vs Claude Web
 
@@ -42,7 +40,7 @@ This project is actively maintained and updated as the MCP specification evolves
 - If Trilium is behind Docker/VPN/Tailscale, ensure Claude Desktop can reach it
 
 **🚀 Future Possibilities:**
-Both Claude Web and ChatGPT now offer "Custom Connectors" (BETA) that can connect to remote MCP servers via HTTPS. We're exploring creating a hosted version of this MCP server for web-based AI assistants. [Follow development updates →](https://github.com/pwelty/mcp-trilium/discussions)
+Both Claude Web and ChatGPT now offer "Custom Connectors" (BETA) that can connect to remote MCP servers via HTTPS. We're exploring creating a hosted version of this MCP server for web-based AI assistants. [Follow development updates →](https://github.com/pwelty/mcp_trilium/discussions)
 
 ## Project Goals
 
@@ -84,7 +82,7 @@ Talk to Claude naturally about your notes:
 - *"Export my research note as HTML"*
 - *"What's the structure under my Projects folder?"*
 
-> 💡 **New to MCP Trilium?** Star ⭐ the repo and [try it out](#installation)! Found it useful? We'd love to hear about your use case in the [discussions](https://github.com/pwelty/mcp-trilium/discussions).
+> 💡 **New to MCP Trilium?** Star ⭐ the repo and [try it out](#installation)! Found it useful? We'd love to hear about your use case in the [discussions](https://github.com/pwelty/mcp_trilium/discussions).
 
 ## Features
 
@@ -138,7 +136,7 @@ Once configured, you can interact with your Trilium notes naturally in Claude De
 
 1. Clone this repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/pwelty/mcp_trilium.git
 cd mcp_trilium
 ```
 
@@ -280,54 +278,21 @@ Edit `%APPDATA%\Claude\claude_desktop_config.json`:
 }
 ```
 
-## Available Tools
-
-### Search and Navigation
-- `search_trilium_notes` - Search for notes using full-text search
-- `get_trilium_note` - Get a specific note by ID
-- `get_trilium_note_tree` - Get the tree structure from a note
-- `get_recent_trilium_notes` - Get recently modified notes
-
-### Note Management
-- `create_trilium_note` - Create a new note
-- `update_trilium_note` - Update an existing note
-- `delete_trilium_note` - Delete a note
-
-### Attributes and Metadata
-- `get_trilium_note_attributes` - Get note attributes (labels/relations)
-- `add_trilium_note_attribute` - Add an attribute to a note
-
-### Utilities
-- `get_trilium_app_info` - Get application info and statistics
-- `export_trilium_note` - Export a note in specified format
-- `backup_trilium_note` - Create a backup of a note
-
-## Example Usage
-
-Once configured, you can use these tools in Claude Desktop:
-
-- "Search for notes about 'machine learning'"
-- "Show me the tree structure starting from the root"
-- "Create a new note called 'Meeting Notes' under the 'Work' folder"
-- "Get the recent notes I've been working on"
-- "Add a label 'important' to note ID abc123"
-
 ## Development
 
-### Running Tests
+### Running tests
 ```bash
-# Activate virtual environment
 source venv/bin/activate
-
-# Run the server directly for testing
-python main.py
+python test_server.py    # Integration tests (requires running Trilium instance)
+python test_mcp.py       # MCP protocol tests
 ```
 
-### Adding New Features
+### Adding new features
 
 1. Add new methods to `TriliumService` class in `services/trilium.py`
 2. Add corresponding tools in `main.py`
 3. Update this README with new tool documentation
+4. Add entry under `[Unreleased]` in `CHANGELOG.md`
 
 ## Troubleshooting
 
@@ -404,13 +369,13 @@ This project is licensed under the MIT License.
 We'd love your help making MCP Trilium even better! Here are ways you can contribute:
 
 ### 🐛 **Report Bugs**
-Found an issue? [Create a bug report](https://github.com/pwelty/mcp-trilium/issues/new) with:
+Found an issue? [Create a bug report](https://github.com/pwelty/mcp_trilium/issues/new) with:
 - Steps to reproduce the problem
 - Expected vs actual behavior  
 - Your system info (OS, Python version, Trilium version)
 
 ### 💡 **Request Features**
-Have an idea? [Open a feature request](https://github.com/pwelty/mcp-trilium/issues/new) and tell us:
+Have an idea? [Open a feature request](https://github.com/pwelty/mcp_trilium/issues/new) and tell us:
 - What you'd like to see added
 - How it would help your workflow
 - Any implementation ideas
