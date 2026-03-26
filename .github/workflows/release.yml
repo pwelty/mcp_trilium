@@ -1,0 +1,53 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.13"
+
+    - name: Install build dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build
+
+    - name: Build package
+      run: python -m build
+
+    - name: Extract release notes from CHANGELOG
+      id: changelog
+      env:
+        TAG_NAME: ${{ github.ref_name }}
+      run: |
+        # Extract the section for this version from CHANGELOG.md
+        VERSION="${TAG_NAME#v}"
+        # Get content between this version header and the next version header
+        awk -v ver="$VERSION" '
+          $0 ~ "^## \\[" ver "\\]" {found=1; next}
+          /^## \[/ {if(found) exit}
+          found {print}
+        ' CHANGELOG.md > release_notes.md
+        echo "Release notes:"
+        cat release_notes.md
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        body_path: release_notes.md
+        files: dist/*
+        generate_release_notes: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

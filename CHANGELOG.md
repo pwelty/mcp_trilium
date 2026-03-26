@@ -7,11 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-01-28
+
 ### Changed
-- Updated MCP SDK from 0.1.0 to 1.26.0 (pinned to v1.x)
-- Updated all dependencies to latest versions
-- Added Python 3.13 support and CI testing
-- Updated Python version badge to reflect 3.10-3.13 support
+- Upgraded MCP SDK from 0.1.0 to 1.26.0 (pinned to v1.x)
+- Updated all dependencies to latest stable versions (httpx 0.28.1, aiohttp 3.13.3)
+- Updated Python version badge to reflect 3.10–3.13 support
+
+### Added
+- Python 3.13 support
+- CI testing across Python 3.10, 3.11, 3.12, 3.13
+- Package build and validation in CI pipeline
+- Security scanning with bandit in CI pipeline
 
 ## [0.1.0] - 2025-07-25
 
@@ -30,47 +37,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cross-platform compatibility (Windows, macOS, Linux)
 - Comprehensive documentation and FAQ
 
-### Changed
-- N/A (initial release)
-
-### Deprecated
-- N/A (initial release)
-
-### Removed
-- N/A (initial release)
-
-### Fixed
-- N/A (initial release)
-
 ### Security
 - API tokens properly secured and not logged
 - Configuration files with sensitive data excluded from git
-
-
----
-
-## Release Notes Template
-
-When releasing a new version, copy this template:
-
-```markdown
-## [X.Y.Z] - YYYY-MM-DD
-
-### Added
-- New features added in this release
-
-### Changed  
-- Changes to existing functionality
-
-### Deprecated
-- Features that will be removed in future versions
-
-### Removed
-- Features removed in this release
-
-### Fixed
-- Bug fixes
-
-### Security
-- Security improvements or fixes
-```
